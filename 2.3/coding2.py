@@ -14,3 +14,13 @@ Judge 4: 8.5
 Judge 5: 9
 Your Olympic score is 8.0
 """
+
+print("What do you rate them")
+jone = float(input("Judge 1: "))
+jtwo = float(input("Judge 2: "))
+jthree = float(input("Judge 3: "))
+jfour = float(input("Judge 4: "))
+jfive = float(input("Judge 5: "))
+
+final = (jone + jtwo + jthree + jfour + jfive) / 5
+print("Your final score is " + str(final))
