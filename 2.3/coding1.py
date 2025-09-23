@@ -11,3 +11,8 @@ How old are you?
 > 25
 In 2056, you will be 56 years old!
 """
+
+age = int(input('What is your age: '))
+
+e = age + 31
+print("In 2056, your age is " + str(e))
