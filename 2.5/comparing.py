@@ -66,13 +66,13 @@ if music == me[7].lower():
     print("You chose the same music genre as me.")
     score += 1
 elif music != me[7].lower():
-    print("You didn't choose the music genre to watch as me.")
+    print("You didn't choose the music genre as me.")
 
 if movie == me[8].lower():
     print("You chose the same movie genre as me.")
     score += 1
 elif movie != me[8].lower():
-    print("You didn't choose the same movie genre to watch as me.")
+    print("You didn't choose the same movie genre as me.")
 
 if food == me[9].lower():
     print("You chose the same fast food as me.")
