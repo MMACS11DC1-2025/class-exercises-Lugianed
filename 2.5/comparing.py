@@ -9,7 +9,7 @@ Test as you go! Describe in your comments what steps you took to test your code.
 
 # Opens the file up and reads the line with my information
 # Asks the user for their imput on the same questions that I answered
-# Gets those imputs and prints out a fraction score of what we had simular and a message depending on the score
+# Gets those imputs and prints out a fraction score of what we had simular
 
 
 # Opens the file and reads it one line at a time
