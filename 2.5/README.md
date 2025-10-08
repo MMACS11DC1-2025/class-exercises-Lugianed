@@ -6,7 +6,6 @@ Each item is worth 1.5 marks, with advanced criteria an additional 0.5 marks.
 
 - [ ] **0. Data Handling**  
   Properly loads and processes data from `responses.csv`  with Python
-  *Advanced Criteria:* Efficiently handles large datasets or multiple files.
 
 - [ ] **1. Algorithm Design**  
   Clear and logical algorithm design written in English before coding.
@@ -26,7 +25,6 @@ Each item is worth 1.5 marks, with advanced criteria an additional 0.5 marks.
 
 - [ ] **5. Code Quality**  
   Code is well-organized, readable, and follows Python naming conventions.  
-  *Advanced Criteria:* Uses modular design with functions to improve readability.
 
 - [ ] **6. Comments and Documentation**  
   Includes meaningful comments that explain the logic and steps taken in the code.  
