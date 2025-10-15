@@ -10,9 +10,6 @@ t = turtle.Turtle()
 
 def circle():
   
-  t.penup()
-  t.goto(0, 0)
-  t.pendown()
   t.circle(67)
   
 
