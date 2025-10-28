@@ -102,3 +102,135 @@ You'll create a fractal generator that can draw at least one recursive pattern (
 3. Document your process as you go - this will help with the README
 4. Think about edge cases - what happens when parameters are 0 or negative?
 5. Don't forget to include peer review in your final submission
+'''''
+import turtle
+
+turtle = turtle.Turtle()
+
+def drawTree(level, branchLength):
+  if level > 0:
+    turtle.forward(branchLength)
+    turtle.left(40)
+    drawTree(level-1, branchLength/1.61)
+    
+    turtle.right(80)
+    drawTree(level-1, branchLength/1.61)
+    
+    turtle.left(40)
+    turtle.back(branchLength)
+  else:
+    turtle.color("green")
+    turtle.stamp()
+    turtle.color("brown")
+turtle.speed(0)
+turtle.penup()
+turtle.goto(0, -180)
+turtle.left(90)
+turtle.pendown()
+
+turtle.color("brown")
+turtle.width(3)
+turtle.shape("triangle")
+levels = input("How many levels do you want me to draw? ")
+drawTree(int(levels), 120)
+'''''
+'''''
+spring
+import turtle
+
+turtle = turtle.Turtle()
+
+def drawTree(level, branchLength):
+  if level > 0:
+    turtle.forward(branchLength)
+    turtle.left(40)
+    drawTree(level-1, branchLength/1.61)
+    
+    turtle.right(80)
+    drawTree(level-1, branchLength/1.61)
+    
+    turtle.left(40)
+    turtle.back(branchLength)
+  else:
+    turtle.color("light green")
+    turtle.stamp()
+    turtle.color("brown")
+turtle.speed(0)
+turtle.penup()
+turtle.goto(0, -180)
+turtle.left(90)
+turtle.pendown()
+
+turtle.color("brown")
+turtle.width(3)
+turtle.shape("triangle")
+levels = input("How many levels do you want me to draw? ")
+drawTree(int(levels), 120)
+'''''
+'''''
+fall
+import turtle
+
+turtle = turtle.Turtle()
+
+def drawTree(level, branchLength):
+  if level > 0:
+    turtle.forward(branchLength)
+    turtle.left(40)
+    drawTree(level-1, branchLength/1.61)
+    
+    turtle.right(80)
+    drawTree(level-1, branchLength/1.61)
+    
+    turtle.left(40)
+    turtle.back(branchLength)
+  else:
+    turtle.color("black")
+    turtle.stamp()
+    turtle.color("brown")
+turtle.speed(0)
+turtle.penup()
+turtle.goto(0, -180)
+turtle.left(90)
+turtle.pendown()
+
+turtle.color("brown")
+turtle.width(3)
+turtle.shape("triangle")
+levels = input("How many levels do you want me to draw? ")
+drawTree(int(levels), 120)
+'''''
+
+'''''
+winter
+import turtle
+
+turtle = turtle.Turtle()
+
+def drawTree(level, branchLength):
+  if level > 0:
+    turtle.forward(branchLength)
+    turtle.left(40)
+    drawTree(level-1, branchLength/1.61)
+    
+    turtle.right(80)
+    drawTree(level-1, branchLength/1.61)
+    
+    turtle.left(40)
+    turtle.back(branchLength)
+  else:
+    turtle.color("light blue")
+    turtle.stamp()
+    turtle.color("brown")
+turtle.speed(0)
+turtle.penup()
+turtle.goto(0, -180)
+turtle.left(90)
+turtle.pendown()
+
+turtle.color("brown")
+turtle.width(3)
+turtle.shape("triangle")
+levels = input("How many levels do you want me to draw? ")
+drawTree(int(levels), 120)
+'''''
