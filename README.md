@@ -15,3 +15,12 @@
 
 ![Step 3](assets/git-3.png "upstream/HEAD")
 
+Main Project:
+Explanation
+Program lets user choose between drawing a pumpkin, snowflake or tree. If tree is chosen it lets user choose the amount of branches.
+
+Peer evaluation
+    Pretty good except limited freedom when making pumpkin and snowflake, if leland added editable levels for the snowflake and make the pumpkin bigger or smaller, it would be better.
+
+    -Karson
+
