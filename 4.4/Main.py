@@ -1,13 +1,16 @@
-'''''
-pumpkin
+# Drawing different shapes based on user input: pumpkin, snowflake, or tree
+
 import turtle
 
+choice = input("Do you want pumpkin, snowflake, or a tree?").lower()
+  
 wn = turtle.Screen()
 wn.bgcolor("lightblue")
 
 t = turtle.Turtle()
-t.speed(8)
+t.speed(100)
 t.hideturtle()
+# Pumpkin drawing functions
 
 def drawcircle(x,y):
   t.color("orangered")
@@ -16,8 +19,7 @@ def drawcircle(x,y):
   t.begin_fill()
   t.circle(70)
   t.end_fill()
-drawcircle(20,0)
-drawcircle(-20,0)
+# Triangle function for eyes and nose
 
 def triangle(x,y):
   t.color("black")
@@ -28,9 +30,7 @@ def triangle(x,y):
   	t.forward(40)
 	  t.left(360/3)
   t.end_fill()
-triangle(15,80)
-triangle(-55,80)
-triangle(-20,50)
+# Mouth function
 
 def mouth():
   t.color("black")
@@ -43,7 +43,7 @@ def mouth():
   t.goto(60,40)
   t.goto(0,30)
   t.end_fill()
-mouth()
+# Stem function
 
 def stem():
   t.color("green")
@@ -60,62 +60,65 @@ def stem():
   t.goto(-15,140)
   t.goto(-40,130)
   t.end_fill()
-stem()
-'''''
-'''''
-tree
-import turtle
-wn = turtle.Screen()
-wn.bgcolor("lightblue")
 
-t = turtle.Turtle()
+# Draw pumpkin if chosen
+if choice == "pumpkin":
+  drawcircle(20,0)
+  drawcircle(-20,0)
+  triangle(15,80)
+  triangle(-55,80)
+  triangle(-20,50)
+  mouth()
+  stem()
+
+# Snowflake drawing function
 t.pencolor("white")
 t.speed(67)
 t.hideturtle()
 true = None
+# Recursive snowflake function
 def snowflake(size):
-  for i in range(6)
+  for i in range(6):
     t.forward(size)
     if (size>6):
       snowflake(size/3)
     t.backward(size)
     t.right(60)
-
-snowflake(150)
-t.mainloop()
-'''''
-'''''
-import turtle
-wn = turtle.Screen()
-wn.bgcolor("lightblue")
-turtle = turtle.Turtle()
-
+# Draw snowflake if chosen
+if choice == "snowflake":
+  snowflake(150)
+  
+# Tree drawing function
 def drawTree(level, branchLength):
   if level > 0:
-    turtle.forward(branchLength)
-    turtle.left(40)
-    drawTree(level-1, branchLength/1.67)
+    t.forward(branchLength)
+    t.left(40)
+    drawTree(level-1, branchLength/1.61)
     
-    turtle.right(80)
-    drawTree(level-1, branchLength/1.67)
+    t.right(80)
+    drawTree(level-1, branchLength/1.61)
     
-    turtle.left(40)
-    turtle.back(branchLength)
+    t.left(40)
+    t.back(branchLength)
   else:
-    turtle.color("light green")
-    turtle.stamp()
-    turtle.color("brown")
-turtle.speed(0)
-turtle.penup()
-turtle.goto(0, -180)
-turtle.left(90)
-turtle.pendown()
+    t.color("light green")
+    t.stamp()
+    t.color("brown")
 
-turtle.color("brown")
-turtle.width(3)
-turtle.shape("triangle")
-levels = input("Amount of branches(max 7): ")
-if levels > 7:
-  levels = 7
-drawTree(int(levels), 120)
-'''''
+# Position turtle for tree drawing
+t.speed(0)
+t.penup()
+t.goto(0, -180)
+t.left(90)
+t.pendown()
+t.color("brown")
+t.width(3)
+t.shape("triangle")
+
+# Draw tree if chosen
+if choice == "tree":
+  levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
+  drawTree(int(levels), 120)
+
+# Finish drawing
+turtle.done()
