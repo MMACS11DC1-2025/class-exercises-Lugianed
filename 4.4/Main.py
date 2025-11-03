@@ -70,6 +70,7 @@ if choice == "pumpkin":
   triangle(-20,50)
   mouth()
   stem()
+# Refer to pumpkin.png for visual reference
 
 # Snowflake drawing function
 t.pencolor("white")
@@ -87,41 +88,139 @@ def snowflake(size):
 # Draw snowflake if chosen
 if choice == "snowflake":
   snowflake(150)
-  
+# Refer to snowflake.png for visual reference
+
 # Tree drawing function
-def drawTree(level, branchLength):
-  if level > 0:
-    t.forward(branchLength)
-    t.left(40)
-    drawTree(level-1, branchLength/1.61)
+leaves = input("What season do you want?").lower()
+
+# Dictionary for different leaf colors based on season
+seasons = {"summer": "#154734", "spring": "#90ee90", 
+           "fall": "#ff4500", "winter": "#ffffff"}
+
+if leaves == "summer":
+  def drawTree(level, branchLength):
+    if level > 0:
+      t.forward(branchLength)
+      t.left(40)
+      drawTree(level-1, branchLength/1.61)
+
+      t.right(80)
+      drawTree(level-1, branchLength/1.61)
+
+      t.left(40)
+      t.back(branchLength)
+    else:
+      t.color(seasons["summer"])
+      t.stamp()
+      t.color("brown")
+  # Position turtle for tree drawing
+  t.speed(0)
+  t.penup()
+  t.goto(0, -180)
+  t.left(90)
+  t.pendown()
+  t.color("brown")
+  t.width(3)
+  t.shape("triangle")
+
+  # Draw tree if chosen
+  if choice == "tree":
+    levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
+    drawTree(int(levels), 120)
+if leaves == "spring":
+  def drawTree(level, branchLength):
+    if level > 0:
+      t.forward(branchLength)
+      t.left(40)
+      drawTree(level-1, branchLength/1.61)
+
+      t.right(80)
+      drawTree(level-1, branchLength/1.61)
+
+      t.left(40)
+      t.back(branchLength)
+    else:
+      t.color(seasons["spring"])
+      t.stamp()
+      t.color("brown")
+  # Position turtle for tree drawing
+  t.speed(0)
+  t.penup()
+  t.goto(0, -180)
+  t.left(90)
+  t.pendown()
+  t.color("brown")
+  t.width(3)
+  t.shape("triangle")
+
+  # Draw tree if chosen
+  if choice == "tree":
+    levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
+    drawTree(int(levels), 120)
     
-    t.right(80)
-    drawTree(level-1, branchLength/1.61)
+if leaves == "fall":
+  def drawTree(level, branchLength):
+    if level > 0:
+      t.forward(branchLength)
+      t.left(40)
+      drawTree(level-1, branchLength/1.61)
+
+      t.right(80)
+      drawTree(level-1, branchLength/1.61)
+
+      t.left(40)
+      t.back(branchLength)
+    else:
+      t.color(seasons["fall"])
+      t.stamp()
+      t.color("brown")
+  # Position turtle for tree drawing
+  t.speed(0)
+  t.penup()
+  t.goto(0, -180)
+  t.left(90)
+  t.pendown()
+  t.color("brown")
+  t.width(3)
+  t.shape("triangle")
+
+  # Draw tree if chosen
+  if choice == "tree":
+    levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
+    drawTree(int(levels), 120)
     
-    t.left(40)
-    t.back(branchLength)
-  else:
-    t.color("light green")
-    t.stamp()
-    t.color("brown")
+if leaves == "winter":
+  def drawTree(level, branchLength):
+    if level > 0:
+      t.forward(branchLength)
+      t.left(40)
+      drawTree(level-1, branchLength/1.61)
 
-# Position turtle for tree drawing
-t.speed(0)
-t.penup()
-t.goto(0, -180)
-t.left(90)
-t.pendown()
-t.color("brown")
-t.width(3)
-t.shape("triangle")
+      t.right(80)
+      drawTree(level-1, branchLength/1.61)
 
-# Draw tree if chosen
-if choice == "tree":
-  levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
-  drawTree(int(levels), 120)
+      t.left(40)
+      t.back(branchLength)
+    else:
+      t.color(seasons["winter"])
+      t.stamp()
+      t.color("brown")
+  # Position turtle for tree drawing
+  t.speed(0)
+  t.penup()
+  t.goto(0, -180)
+  t.left(90)
+  t.pendown()
+  t.color("brown")
+  t.width(3)
+  t.shape("triangle")
 
-# Finish drawing
-turtle.done()
+  # Draw tree if chosen
+  if choice == "tree":
+    levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
+    drawTree(int(levels), 120)
+  # Finish drawing
+  turtle.done()
 '''''
 Testing Log:
   Pumpkin is slightly off center but looks good
