@@ -8,7 +8,7 @@ wn = turtle.Screen()
 wn.bgcolor("lightblue")
 
 t = turtle.Turtle()
-t.speed(100)
+t.speed(10)
 t.hideturtle()
 # Pumpkin drawing functions
 
@@ -70,6 +70,8 @@ if choice == "pumpkin":
   triangle(-20,50)
   mouth()
   stem()
+  # Finish drawing
+  turtle.done()
 # Refer to pumpkin.png for visual reference
 
 # Snowflake drawing function
@@ -89,7 +91,8 @@ def snowflake(size):
 if choice == "snowflake":
   snowflake(150)
 # Refer to snowflake.png for visual reference
-
+# Finish drawing
+turtle.done()
 # Tree drawing function
 leaves = input("What season do you want?").lower()
 
@@ -127,6 +130,8 @@ if leaves == "summer":
   if choice == "tree":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
     drawTree(int(levels), 120)
+  # Finish drawing
+  turtle.done()
 
 if leaves == "spring":
   def drawTree(level, branchLength):
@@ -159,7 +164,9 @@ if leaves == "spring":
   if choice == "tree":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
     drawTree(int(levels), 120)
-    
+  # Finish drawing
+  turtle.done()
+
 if leaves == "fall" or leaves == "autumn":
   def drawTree(level, branchLength):
     if level > 0:
@@ -191,7 +198,9 @@ if leaves == "fall" or leaves == "autumn":
   if choice == "tree":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
     drawTree(int(levels), 120)
-    
+  # Finish drawing
+  turtle.done()
+
 if leaves == "winter":
   def drawTree(level, branchLength):
     if level > 0:
