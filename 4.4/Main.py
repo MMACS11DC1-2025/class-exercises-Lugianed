@@ -122,11 +122,12 @@ if leaves == "summer":
   t.color("brown")
   t.width(3)
   t.shape("triangle")
-
   # Draw tree if chosen
+  # Refer to summer tree with 5 branches.png for visual reference
   if choice == "tree":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
     drawTree(int(levels), 120)
+
 if leaves == "spring":
   def drawTree(level, branchLength):
     if level > 0:
@@ -154,11 +155,12 @@ if leaves == "spring":
   t.shape("triangle")
 
   # Draw tree if chosen
+  # Refer to spring tree with 5 branches.png for visual reference
   if choice == "tree":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
     drawTree(int(levels), 120)
     
-if leaves == "fall":
+if leaves == "fall" or leaves == "autumn":
   def drawTree(level, branchLength):
     if level > 0:
       t.forward(branchLength)
@@ -185,6 +187,7 @@ if leaves == "fall":
   t.shape("triangle")
 
   # Draw tree if chosen
+  # Refer to fall tree with 5 branches.png for visual reference
   if choice == "tree":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
     drawTree(int(levels), 120)
@@ -214,8 +217,8 @@ if leaves == "winter":
   t.color("brown")
   t.width(3)
   t.shape("triangle")
-
   # Draw tree if chosen
+  # Refer to winter tree with 5 branches.png for visual reference
   if choice == "tree":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
     drawTree(int(levels), 120)
