@@ -1,15 +1,15 @@
 # Drawing different shapes based on user input: pumpkin, snowflake, or tree
 
 import turtle
-
-choice = input("Do you want pumpkin, snowflake, or a tree?").lower()
-  
 wn = turtle.Screen()
 wn.bgcolor("lightblue")
 
 t = turtle.Turtle()
 t.speed(10)
 t.hideturtle()
+
+choice = input("Do you want pumpkin, snowflake, or a tree?").lower()
+  
 # Pumpkin drawing functions
 
 def drawcircle(x,y):
@@ -92,14 +92,19 @@ if choice == "snowflake":
   snowflake(150)
 # Refer to snowflake.png for visual reference
 # Finish drawing
-turtle.done()
-# Tree drawing function
-leaves = input("What season do you want?").lower()
+  turtle.done()
 
+# Tree drawing function
 # Dictionary for different leaf colors based on season
 seasons = {"summer": "#154734", "spring": "#90ee90", 
            "fall": "#ff4500", "winter": "#ffffff"}
+# Variable to stop errors
+leaves = 0  
+# Tree drawing function
+if choice == "tree":
+	leaves = input("What season do you want?").lower()
 
+# Draws summer tree
 if leaves == "summer":
   def drawTree(level, branchLength):
     if level > 0:
@@ -125,7 +130,7 @@ if leaves == "summer":
   t.color("brown")
   t.width(3)
   t.shape("triangle")
-  # Draw tree if chosen
+  # Asks for amount of branches and draws tree if chosen
   # Refer to summer tree with 5 branches.png for visual reference
   if choice == "tree":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
@@ -133,6 +138,7 @@ if leaves == "summer":
   # Finish drawing
   turtle.done()
 
+# Draws spring tree
 if leaves == "spring":
   def drawTree(level, branchLength):
     if level > 0:
@@ -158,8 +164,7 @@ if leaves == "spring":
   t.color("brown")
   t.width(3)
   t.shape("triangle")
-
-  # Draw tree if chosen
+  # Asks for amount of branches and draws tree if chosen
   # Refer to spring tree with 5 branches.png for visual reference
   if choice == "tree":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
@@ -167,6 +172,7 @@ if leaves == "spring":
   # Finish drawing
   turtle.done()
 
+# Draws fall tree
 if leaves == "fall" or leaves == "autumn":
   def drawTree(level, branchLength):
     if level > 0:
@@ -192,8 +198,7 @@ if leaves == "fall" or leaves == "autumn":
   t.color("brown")
   t.width(3)
   t.shape("triangle")
-
-  # Draw tree if chosen
+  # Asks for amount of branches and draws tree if chosen
   # Refer to fall tree with 5 branches.png for visual reference
   if choice == "tree":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
@@ -201,6 +206,7 @@ if leaves == "fall" or leaves == "autumn":
   # Finish drawing
   turtle.done()
 
+# Draws winter tree
 if leaves == "winter":
   def drawTree(level, branchLength):
     if level > 0:
@@ -226,7 +232,7 @@ if leaves == "winter":
   t.color("brown")
   t.width(3)
   t.shape("triangle")
-  # Draw tree if chosen
+  # Asks for amount of branches and draws tree if chosen
   # Refer to winter tree with 5 branches.png for visual reference
   if choice == "tree":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
