@@ -3,7 +3,7 @@
 import turtle
 wn = turtle.Screen()
 wn.bgcolor("lightblue")
-
+count = 0
 t = turtle.Turtle()
 t.speed(10)
 t.hideturtle()
@@ -98,13 +98,10 @@ if choice == "snowflake":
 # Dictionary for different leaf colors based on season
 seasons = {"summer": "#154734", "spring": "#90ee90", 
            "fall": "#ff4500", "winter": "#ffffff"}
-# Variable to stop errors
 leaves = 0  
-# Tree drawing function
 if choice == "tree":
 	leaves = input("What season do you want?").lower()
 
-# Draws summer tree
 if leaves == "summer":
   def drawTree(level, branchLength):
     if level > 0:
@@ -136,9 +133,10 @@ if leaves == "summer":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
     drawTree(int(levels), 120)
   # Finish drawing
+  count += int(levels)
+  print("Amount of branches drawn(amount of recursive calls): " + str(count))
   turtle.done()
 
-# Draws spring tree
 if leaves == "spring":
   def drawTree(level, branchLength):
     if level > 0:
@@ -170,9 +168,10 @@ if leaves == "spring":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
     drawTree(int(levels), 120)
   # Finish drawing
+  count += int(levels)
+  print("Amount of branches drawn(amount of recursive calls): " + str(count))
   turtle.done()
 
-# Draws fall tree
 if leaves == "fall" or leaves == "autumn":
   def drawTree(level, branchLength):
     if level > 0:
@@ -204,9 +203,10 @@ if leaves == "fall" or leaves == "autumn":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
     drawTree(int(levels), 120)
   # Finish drawing
+  count += int(levels)
+  print("Amount of branches drawn(amount of recursive calls): " + str(count))
   turtle.done()
 
-# Draws winter tree
 if leaves == "winter":
   def drawTree(level, branchLength):
     if level > 0:
@@ -238,6 +238,8 @@ if leaves == "winter":
     levels = input("Amount of branches(1 and 2 is too low. 3-7 recommended to avoid crashing): ")
     drawTree(int(levels), 120)
   # Finish drawing
+  count += int(levels)
+  print("Amount of branches drawn(amount of recursive calls): " + str(count))
   turtle.done()
 '''''
 Testing Log:
@@ -272,4 +274,3 @@ Challenges in Development:
 - Trouble with asking for amount of branches even when tree wasn't chosen
 - Trouble with tree getting crunched into a ball
 - Trouble with ideas
-'''''
