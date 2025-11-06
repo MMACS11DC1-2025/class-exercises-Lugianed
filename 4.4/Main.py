@@ -241,6 +241,7 @@ if leaves == "winter":
   count += int(levels)
   print("Amount of branches drawn(amount of recursive calls): " + str(count))
   turtle.done()
+  
 '''''
 Testing Log:
   Pumpkin is slightly off center but looks good
@@ -249,9 +250,6 @@ Testing Log:
   Asking for the amount of branches is causing issues when tree isn't chosen
   Finally got
 
-'''''
-
-'''''
 Recursive approach for the tree:
   keeps dividing the size of the branches so it visably looks smaller each time it branches out
 
@@ -268,7 +266,6 @@ Input:
   5
 Output:
   *prints tree drawing with 5 different branches*
-
 
 Challenges in Development:
 - Trouble with asking for amount of branches even when tree wasn't chosen
