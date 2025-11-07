@@ -8,7 +8,13 @@ t = turtle.Turtle()
 t.speed(0)
 t.hideturtle()
 
+# Get user choice for shape to draw
 choice = input("Do you want pumpkin, snowflake, or a tree?").lower()
+
+# Validate shape input
+if choice != "pumpkin" and choice != "snowflake" and choice != "tree":
+  print("Invalid choice, please choose pumpkin, snowflake, or tree.")
+  exit()
   
 # Pumpkin drawing functions
 
@@ -76,7 +82,7 @@ if choice == "pumpkin":
 
 # Snowflake drawing function
 t.pencolor("white")
-t.speed(67)
+t.speed(0)
 t.hideturtle()
 true = None
 # Recursive snowflake function
@@ -101,6 +107,11 @@ seasons = {"summer": "#154734", "spring": "#90ee90",
 leaves = 0  
 if choice == "tree":
 	leaves = input("What season do you want?").lower()
+
+# Validate season input
+if leaves != "summer" and leaves != "spring" and leaves != "fall" and leaves != "autumn" and leaves != "winter":
+  print("Invalid choice, please choose summer, spring, fall/autumn, or winter.")
+  exit()
 
 if leaves == "summer":
   def drawTree(level, branchLength):
