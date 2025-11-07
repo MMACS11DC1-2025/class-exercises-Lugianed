@@ -5,7 +5,7 @@ wn = turtle.Screen()
 wn.bgcolor("lightblue")
 count = 0
 t = turtle.Turtle()
-t.speed(10)
+t.speed(0)
 t.hideturtle()
 
 choice = input("Do you want pumpkin, snowflake, or a tree?").lower()
@@ -241,34 +241,3 @@ if leaves == "winter":
   count += int(levels)
   print("Amount of branches drawn(amount of recursive calls): " + str(count))
   turtle.done()
-  
-'''''
-Testing Log:
-  Pumpkin is slightly off center but looks good
-  Snowflake is drawn very slowly, increasing the speed
-  Tree is hard to implement with the others
-  Asking for the amount of branches is causing issues when tree isn't chosen
-  Finally got
-
-Recursive approach for the tree:
-  keeps dividing the size of the branches so it visably looks smaller each time it branches out
-
-Input:
-  pumpkin
-Output:
-  *prints pumpkin drawing*
-Input:
-  snowflake
-Output:
-  *prints snowflake drawing*
-Input:
-  tree
-  5
-Output:
-  *prints tree drawing with 5 different branches*
-
-Challenges in Development:
-- Trouble with asking for amount of branches even when tree wasn't chosen
-- Trouble with tree getting crunched into a ball
-- Trouble with ideas
-'''''

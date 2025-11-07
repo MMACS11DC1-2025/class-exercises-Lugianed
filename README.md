@@ -21,6 +21,35 @@ Main Project:
     Explanation:
         Program lets user choose between drawing a pumpkin, snowflake or tree. If tree is chosen it lets user choose the amount of branches and the season they want it to be.
 
+    Testing Log:
+    Pumpkin is slightly off center but looks good
+    Snowflake is drawn very slowly, increasing the speed
+    Tree is hard to implement with the others
+    Asking for the amount of branches is causing issues when tree isn't chosen
+    Finally got
+
+    Recursive approach for the tree:
+    keeps dividing the size of the branches so it visably looks smaller each time it branches out
+
+    Input:
+    pumpkin
+    Output:
+    *prints pumpkin drawing*
+    Input:
+    snowflake
+    Output:
+    *prints snowflake drawing*
+    Input:
+    tree
+    5
+    Output:
+    *prints tree drawing with 5 different branches*
+
+    Challenges in Development:
+    - Trouble with asking for amount of branches even when tree wasn't chosen
+    - Trouble with tree getting crunched into a ball
+    - Trouble with ideas
+    
     Peer evaluation:
         Pretty good except limited freedom when making pumpkin and snowflake, if leland added editable levels for the snowflake and make the pumpkin bigger or smaller, it would be better.
 
