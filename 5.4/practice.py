@@ -1,15 +1,12 @@
 from PIL import Image
 
 file = Image.open("5.4/jelly_beans.jpg")
+jbimg = file.load()
 
 image_output = Image.open("5.4/jelly_beans.jpg")
 
-jbimg = file.load()
-
 width = file.width
 height = file.height
-
-yellow_pixels = 0
 
 for x in range(width):
     for y in range(height):
