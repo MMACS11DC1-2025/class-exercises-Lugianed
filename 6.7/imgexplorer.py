@@ -13,7 +13,7 @@ for image in image_list:
     height = file.height
 
     def is_target_color(r, g, b):
-        if 200 <= r >= 255 and 100 <= g >= 200 and 120 <= b >= 200:
+        if 100 <= r >= 255 and 7 <= g >= 150 and 120 <= b >= 200:
             return True
         return False
     for x in range(width):
