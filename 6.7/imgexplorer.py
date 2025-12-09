@@ -4,7 +4,7 @@ import time
 pink_color = 0
 
 image_list = ("pinkflower1.webp", "pinkflower2.webp", "pinkflower3.webp", "pinkflower4.webp", "pinkflower5.webp",
-              "pinkflower6.webp", "pinkflower7.webp", "pinkflower8.webp", "pinkflower9.webp", "pinkflower10.webp")
+              "pinkflower6.webp", "pinkflower7.webp", "pinkflower8.png", "pinkflower9.png", "pinkflower10.png")
 for image in image_list:
     file = Image.open("6.7/" + image)
     img = file.load()
