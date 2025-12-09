@@ -1,7 +1,12 @@
 from PIL import Image
 import time
 
-pink_color = 0
+count = 0
+final = 0
+def is_target_color(r, g, b):
+    if (100 <= r >= 255 and 7 <= g >= 150 and 120 <= b >= 200) and (3 <= r >= 155 and 5 <= g >= 180 and 0 <= b >= 60):
+        return True
+    return False
 
 image_list = ("pinkflower1.webp", "pinkflower2.webp", "pinkflower3.webp", "pinkflower4.webp", "pinkflower5.webp",
               "pinkflower6.webp", "pinkflower7.webp", "pinkflower8.png", "pinkflower9.png", "pinkflower10.png")
@@ -11,17 +16,18 @@ for image in image_list:
 
     width = file.width
     height = file.height
-
-    def is_target_color(r, g, b):
-        if 100 <= r >= 255 and 7 <= g >= 150 and 120 <= b >= 200:
-            return True
-        return False
+    pink_color = 0
     for x in range(width):
         for y in range(height):
             r = img[x, y][0]
             g = img[x, y][1]
             b = img[x, y][2]
-        if is_target_color(r, g, b):
-            pink_color += 1
+            if is_target_color(r, g, b):
+                pink_color += 1
+                print("Number of images with pink color:", pink_color)
+                print(image)
+        if pink_color == 1:
+            final += 1
+            break
 
-print("Number of images with pink color:", pink_color)
+print(final)
