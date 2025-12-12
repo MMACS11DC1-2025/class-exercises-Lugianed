@@ -1,37 +1,45 @@
 from PIL import Image
 import time
 
-count = 0
-final = 0
-def is_target_color(r, g, b):
-    if 90 <= r >= 255 and 7 <= g >= 150 and 120 <= b >= 200:
-        print(r, g, b)
+
+def is_target_color(r, g, b): # checks if it is pink
+    if 150 <= r >= 220 and 20 <= g >= 90 and 100 <= b >= 180:
         return True
     return False
-def is_another_color(r, g, b):
-    if 3 <= r >= 155 and 5 <= g >= 180 and 0 <= b >= 60:
-        print(r, g, b)
-        return True
-    return False
-image_list = ("pinkflower1.webp", "pinkflower2.webp", "pinkflower3.webp", "pinkflower11.jpg", "pinkflower5.webp",
-              "pinkflower6.webp", "pinkflower7.webp", "pinkflower8.png", "pinkflower9.png", "pinkflower10.png")
+image_list = ("pink1.webp", "pink2.webp", "pink3.webp", "pink4.webp", "pink5.webp",
+              "pink6.webp", "pink7.webp", "pink8.webp", "pink9.webp", "pink10.webp")
 for image in image_list:
     file = Image.open("6.7/" + image)
     img = file.load()
 
     width = file.width
     height = file.height
-    pink_color = 0
+    pink_pixels = []
     for x in range(width):
         for y in range(height):
             r = img[x, y][0]
             g = img[x, y][1]
             b = img[x, y][2]
-            if is_target_color(r, g, b) and is_another_color(r, g, b):
-                pink_color += 1
-                print(x, y)
-                print(image)
-        if pink_color == 1:
-            final += 1
-            break
-print(final)
+            if is_target_color(r, g, b):
+                pink_pixels.append((img, (x, y)))
+    num_pink = len(pink_pixels)
+    total_pixels = width*height
+    pink_ratio = num_pink / total_pixels
+    pink_percent = pink_ratio * 100
+    report = (image) + " Is {:.2f}% pink.".format(pink_percent)
+    print(report)
+
+
+def search(list_of_lists, query):
+    search_start_index = 0
+    search_end_index = len(list_of_lists) - 1
+    while search_start_index <= search_end_index:
+        midpoint = int((search_start_index + search_end_index) / 2)
+        if list_of_lists[midpoint][0] == query:
+            return list_of_lists[midpoint][1]
+        elif list_of_lists[midpoint][0] < query:
+            search_start_index = midpoint + 1
+        else:
+            search_end_index = midpoint - 1
+    return -1
+

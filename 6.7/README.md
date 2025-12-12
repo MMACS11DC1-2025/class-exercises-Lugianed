@@ -1,5 +1,3 @@
-1. I will be scanning flowers for my main theme.
-2. My code will be detecting if the flowers are pink.
-3. There will be a function that goes through all of the pixels to look if there is pink. Pink
-is usually not found in nature besides flowers, so if it detects pink, it will most likely be
-a flower.
+1. It looks to see how much pink is in the fields of the flowers.
+2. It will detect the amount of pink and make it into a percent for the person using the program to see.
+3. It will just look for how much pink is in each picture and print.
