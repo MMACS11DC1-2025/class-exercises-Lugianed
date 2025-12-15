@@ -1,7 +1,7 @@
 from PIL import Image
 import time
 
-
+picture_percents = []
 def is_target_color(r, g, b): # checks if it is pink
     if 150 <= r >= 220 and 20 <= g >= 90 and 100 <= b >= 180:
         return True
@@ -22,14 +22,29 @@ for image in image_list:
             b = img[x, y][2]
             if is_target_color(r, g, b):
                 pink_pixels.append((img, (x, y)))
+    # calculates percentage of pink pixels
     num_pink = len(pink_pixels)
     total_pixels = width*height
     pink_ratio = num_pink / total_pixels
     pink_percent = pink_ratio * 100
     report = (image) + " Is {:.2f}% pink.".format(pink_percent)
     print(report)
+    pink_round = round(pink_percent)
+    picture_percents.append(pink_round)
 
+# selection sort
+for i in range(len(pink_round)):
+    smallest_score = pink_round[i]
+    smallest_index = i
 
+    for j in range(i+1, len(pink_round)):
+        if pink_round[j] < smallest_score:
+            smallest_score < pink_round[j]
+            smallest_index = j
+            pink_round[smallest_index], pink_round[i] = pink_round[i], pink_round[smallest_index]
+print(pink_round)
+
+# binary search
 def search(list_of_lists, query):
     search_start_index = 0
     search_end_index = len(list_of_lists) - 1
