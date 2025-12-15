@@ -45,7 +45,7 @@ for image in image_list:
     pink_percent = pink_ratio * 100
     
     # the thing that user sees
-    report = image + " has {:.2f}% pink.".format(pink_percent)
+    report = image + " is {:.2f}% pink.".format(pink_percent)
     print(report)
 
     # adds to master list
@@ -97,4 +97,3 @@ if search(picture_percents, finder) == -1:
 else:
     print("The percentage you wanted to find is in position: " + str(results))
 
-    
