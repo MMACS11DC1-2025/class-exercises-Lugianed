@@ -96,3 +96,5 @@ if search(picture_percents, finder) == -1:
     print("That percentage is not in the list.")
 else:
     print("The percentage you wanted to find is in position: " + str(results))
+
+    
