@@ -57,4 +57,3 @@ def search(list_of_lists, query):
         else:
             search_end_index = midpoint - 1
     return -1
-
