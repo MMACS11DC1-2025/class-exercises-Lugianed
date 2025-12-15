@@ -45,7 +45,7 @@ for image in image_list:
     pink_percent = pink_ratio * 100
     
     # the thing that user sees
-    report = image + " has {:.2f}% pink.".format(pink_percent) # CHANGE FILE NAMES TO START WITH CAPITAL LETTERS
+    report = image + " has {:.2f}% pink.".format(pink_percent)
     print(report)
 
     # adds to master list
