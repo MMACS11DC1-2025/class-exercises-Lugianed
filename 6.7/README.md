@@ -19,3 +19,6 @@ what it is now. One of the most important parts of fine tuning this was finding 
 REAL WORLD USE-CASE:
 Some people collect plants for collective purposes and pink flowers are very unusual to find in the wild. So, if someone 
 is looking for a rare pink flower, they can plug it into this and check which ones could have the flowers.
+SOURCES:
+https://www.petalrepublic.com/rarest-flowers-in-the-world/
+https://www.planetnatural.com/pink-flowers/
