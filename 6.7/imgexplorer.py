@@ -11,9 +11,12 @@ def is_target_color(r, g, b):
     else:
         return False
     
-# masterlist of images
-image_list = ("pink1.webp", "pink2.webp", "pink3.webp", "pink4.webp", "pink5.webp",
-              "pink6.webp", "pink7.webp", "pink8.webp", "pink9.webp", "pink10.webp")
+# image list
+image_list = ["pink1.webp", "pink2.webp", "pink3.webp", "pink4.webp", "pink5.webp",
+              "pink6.webp", "pink7.webp", "pink8.webp", "pink9.webp", "pink10.webp"]
+
+# master list of tuples
+master_list = []
 
 # start of timing
 pixel_analysis_start = time.time()
@@ -47,7 +50,7 @@ for image in image_list:
     # the thing that user sees
     report = image + " is {:.2f}% pink.".format(pink_percent)
     print(report)
-
+    master_list.append((image, round(pink_percent)))
     # adds to master list
     pink_round = round(pink_percent)
     picture_percents.append(pink_round)
@@ -96,4 +99,3 @@ if search(picture_percents, finder) == -1:
     print("That percentage is not in the list.")
 else:
     print("The percentage you wanted to find is in position: " + str(results))
-
