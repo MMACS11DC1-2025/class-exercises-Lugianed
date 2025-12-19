@@ -1,27 +1,27 @@
 from PIL import Image
 import time
 
-# master list of all pink percentages
-picture_percents = []
-
-# checks if it is pink
+# the code that checks if the color is pink
 def is_target_color(r, g, b):
     if r >= 115 and b >= 65 and g <= 185:
         return True
     else:
         return False
     
+
+# all the lists that are used outside the loop
 # image list
 image_list = ["pink1.webp", "pink2.webp", "pink3.webp", "pink4.webp", "pink5.webp",
               "pink6.webp", "pink7.webp", "pink8.webp", "pink9.webp", "pink10.webp"]
-
 # master list of tuples
 master_list = []
+# master list of all pink percentages
+picture_percents = []
 
 # start of timing
 pixel_analysis_start = time.time()
 
-# goes through each image
+# goes through each of the files and loads it
 for image in image_list:
     file = Image.open("6.7/" + image)
     img = file.load()
@@ -47,14 +47,16 @@ for image in image_list:
     pink_ratio = num_pink / total_pixels
     pink_percent = pink_ratio * 100
     
-    # the thing that user sees
+    # the information that is displayed to the user
     report = image + " is {:.2f}% pink.".format(pink_percent)
     print(report)
-    master_list.append((image, round(pink_percent)))
     # adds to master list
+    master_list.append((image, round(pink_percent)))
+    # rounds the percentage to the nearest whole number and adds to the list
     pink_round = round(pink_percent)
     picture_percents.append(pink_round)
-# finishes timing
+    
+# finishes timing and prints it
 pixel_analysis_end = time.time()
 pixel_analysis_time = pixel_analysis_end - pixel_analysis_start
 print("Anaylsis through all pixels took {:.3f} seconds to look through.".format(pixel_analysis_time))
